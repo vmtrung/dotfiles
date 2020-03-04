@@ -1,5 +1,7 @@
 set nocompatible	" Use Vim settings, rather than Vi settings
 
+colorscheme badwolf	" set nice looking colorscheme
+
 set tabstop=4		" Show existing tab with 4 spaces width
     
 set softtabstop=4	" Indent by 4 spaces when hitting tab
@@ -17,13 +19,18 @@ filetype indent on	" load filetype-specific indent files
 
 set wildmenu    " visual autocomplete for command menu
 
-set shiftwidth=4	" Indent by 4 spaces when auto-indenting
+set shiftwidth=4	" Indent by 4 spaces when auto-indenting visually
 
 set showmatch		" Show the matching part of the pair for [] {} and ()
 
-set incsearch   " search as characters are entered
+" Remap jk to 'Esc' key
+inoremap jk <Esc>  
 
+set incsearch   " search as characters are entered
 set hlsearch    " highlight matches
+
+" Rebind <leader> key
+let mapleader=","
 
 " Turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR> 
@@ -35,11 +42,10 @@ syntax on		" Enable syntax highlighting
 set autoindent		" Enable autoidenting, indent when moving to the next line
 					" while writing code	
 
-inoremap jk <Esc>  " Remap jk to 'Esc' key
-
-colorscheme desert	" set nice looking colorscheme
 
 set nobackup		" Disable backup file
+set noswapfile
+set nowritebackup
 
 set directory=$HOME/.vim/swp//
 
