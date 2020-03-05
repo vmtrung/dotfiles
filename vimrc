@@ -52,14 +52,26 @@ set directory=$HOME/.vim/swp//
 set laststatus=2	" Show status line
 
 " Set up other plugin using Vundle as plugin manager
+filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-
+" Plugin manager
 Plugin 'gmarik/Vundle.vim'
+" Folding
+Plugin 'tmhedberg/SimplyFold'
+" highlight brackets with different colors
+Plugin 'frazrepo/vim-rainbow'
 
+Plugin 'itchyny/lightline.vim'
+
+Plugin 'preservim/nerdtree'
 
 call vundle#end()
 filetype plugin indent on
 
-
-
+" SimplyFold customization
+let g:SimplyFold_docstring_preview=1
+" vim-rainbow customization
+let g:rainbow_active=1
+" nerdtree
+map <F2> :NERDTreeToggle<CR>
