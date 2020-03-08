@@ -1,0 +1,11 @@
+File flake8 not found:...
+==> conda install flake8
+
+YCM SHUTDOWN
+==>
+sudo apt update
+sudo apt upgrade
+sudo apt install build-essential cmake
+cd ~/.vim/bundle/YouCompleteMe
+conda activate (if not, go to miniconda folder and type 'source activate'
+python install.py

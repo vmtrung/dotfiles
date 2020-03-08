@@ -23,6 +23,8 @@ au BufNewFile,BufRead *.py set expandtab
 au BufNewFile,BufRead *.py set autoindent
 au BufNewFile,BufRead *.py set fileformat=unix
 
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+
 set showcmd     " show command in bottom bar
 
 set cursorline		" Show a visual line under the cursor current line
@@ -120,3 +122,10 @@ let g:rainbow_active=1
 
 " nerdtree, map F2 key to open/close NERDTree
 map <F2> :NERDTreeToggle<CR>
+"ignore files in NERDTree
+let NERDTreeIgnore=['\.pyc$', '\~$'] 
+
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+autocmd BufWritePost *.py call Flake8()
