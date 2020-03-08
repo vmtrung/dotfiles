@@ -1,5 +1,7 @@
 set nocompatible	" Use Vim settings, rather than Vi settings
 
+set encoding=utf-8
+
 colorscheme badwolf	" set nice looking colorscheme
 
 set tabstop=4		" Show existing tab with 4 spaces width
@@ -12,7 +14,6 @@ set expandtab		" Turn <TAB>s into spaces
 
 set number		" Enable line numbers
 set relativenumber " Enable relative number of line regarding to the current line
-
 
 au BufNewFile,BufRead *.py set tabstop=4 
 au BufNewFile,BufRead *.py set softtabstop=4
@@ -72,7 +73,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " Folding
-Plugin 'tmhedberg/SimplyFold'
+Plugin 'tmhedberg/SimpylFold'
 
 " highlight brackets with different colors
 Plugin 'frazrepo/vim-rainbow'
@@ -113,7 +114,9 @@ filetype plugin indent on
 
 " SimplyFold customization
 let g:SimplyFold_docstring_preview=1
+
 " vim-rainbow customization
 let g:rainbow_active=1
+
 " nerdtree, map F2 key to open/close NERDTree
 map <F2> :NERDTreeToggle<CR>
